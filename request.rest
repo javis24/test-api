@@ -1,0 +1,113 @@
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+      "name": "jesus",
+      "email": "jesus@correo.com",
+      "password": "12334",
+      "confPassword": "12334",
+      "role": "alumno", 
+      "branch": "GomezPalacio"
+}
+
+###
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/5a8b3350-2f39-460b-bfc9-89a0cac6b866
+
+###
+PATCH   http://localhost:5000/users/5a8b3350-2f39-460b-bfc9-89a0cac6b866
+Content-Type: application/json
+
+{
+      "name": "sucursal Ibero",
+      "email": "sgp@correo.com",
+      "password": "",
+      "confPassword": "",
+      "role": "recepcion", 
+      "branch": "Ibero"
+}
+
+###
+DELETE http://localhost:5000/users/5a8b3350-2f39-460b-bfc9-89a0cac6b866
+
+###
+//Login User Admin
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{      
+      "email": "correo@correo.com",
+      "password": "12334"
+}
+
+###
+//Login User recepcion
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+      
+      "email": "sgp@correo.com",
+      "password": "12334"
+}
+
+
+###
+//Login User alumno
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{      
+      "email": "jesus@correo.com",
+      "password": "12334"
+}
+###
+//Login User
+GET http://localhost:5000/me
+
+###
+//Login User
+DELETE http://localhost:5000/class/de3d63ce-d1e4-4edd-8b57-157e97c6f866
+
+
+###
+//todas las clases
+GET http://localhost:5000/class
+
+###
+//Agendar clases
+POST  http://localhost:5000/class
+Content-Type: application/json
+
+{      
+    "classDate": "2024-02-15",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "branch": "GomezPalacio"
+}
+
+###
+DELETE http://localhost:5000/logout
+
+
+###
+//una clases
+GET http://localhost:5000/class/bffb7f75-0f9f-4d48-95fa-1b3a7132a2c2
+
+###
+//Actualizar una clases
+PATCH  http://localhost:5000/class/bffb7f75-0f9f-4d48-95fa-1b3a7132a2c2
+Content-Type: application/json
+
+{      
+    "classDate": "2024-02-15",
+    "startTime": "25:00",
+    "endTime": "10:00",
+    "branch": "Ibero"
+}
+
+
+###
+DELETE http://localhost:5000/class/0c02f373-81c5-4536-a9dd-70837aaacd02
