@@ -33,7 +33,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'api-coningles-api-conignles.ywdlku.easypanel.host'
+    origin: 'radioshalomonline.com'
 }));
 app.use(express.json());
 app.use(UserRoute);
