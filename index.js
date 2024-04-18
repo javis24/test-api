@@ -33,7 +33,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: 'api-coningles-api-conignles.ywdlku.easypanel.host'
 }));
 app.use(express.json());
 app.use(UserRoute);
